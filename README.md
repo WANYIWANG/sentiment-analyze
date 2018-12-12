@@ -1,17 +1,29 @@
 # sentiment-analyze
-# Programming for Cultural Heritage Final Project Proposal
+# Program For Cultural Heritage
+Final Presentation: Sentiment Analysis of “Gene-Editing”tweets 
 # My Github Repo: https://github.com/WANYIWANG/sentiment-analyze
 
 # Project Description:
-The final project of Programming for Culture Heritage is an integrity project with API request, data scraping, semantical analyze, and data visualization. My topic is about the movement of #MeToo on Twitter. The #MeToo movement, with many local and international alternatives, is a movement against sexual harassment and sexual assault. #MeToo spread virally in October 2017 as a hashtag used on social media in an attempt to demonstrate the widespread prevalence of sexual assault and harassment, especially in the workplace. I want to display a geo-semantical map that shows attitudes of people from different countries of the world about #MeToo movement.  
+The final project of Programming for Culture Heritage is an integrity project with API request, data scraping and cleaning, semantical analyze, save data into csv file, and data visualization. 
+Recently, A Chinese researcher used CRISPR - Cas9 technology that created the first gene-edited twin babies.
+CRISPR is easier to use and more precise than previous methods, but it is not a perfect technology. It can lead to unintended consequences, such as affecting other genes (“off-target” effects) or making multiple modifications of the gene we are aiming to modify (“on-target” effects). There is an ongoing discussion as to how widespread “off target” and “on-targets” modifications are, and what the unintended consequences of these effects may be.
+This technology Is not allowed in US and many other country. 
+My topic is about the movement of #gene_editing on Twitter. I want to analysis US people’s opinions (positive or negative) about this issue by the distribution of region. 
 
-# Which Page I Am:
-Right Now, I finished Twitter API key request, used Twurl get 100 tweets about #MeToo and saved it into a text file. I also scripted main information, above user location and tweets content inside of Jason file.
-I need more tweets with locations that apply Google NLP API to do the semantic analysis. Eventually, I want to get corresponding user address and tweets and get longitude and latitude by Google Map API.  I will use location information and semantic analysis results(attitude number) to make a map that illustrates how this movement influence people all over the world. The map will be made by Leaflet or D3.JS. 
+# Procedure:
+First of all, request tweets API from twitter, get the API key. Then 
 
-# Problem: 
-Right now, I can only get 100 #MeToo tweets per query, also my second query gets the same result with the first one. 
-I right now keep searching for more resources. But preparing for the worst, I may only analysis 100 tweets. I find CSV file of #MeToo tweets in 2017, but without location information: https://data.world/balexturner/390-000-metoo-tweets
+
+# Result Analysis (still working on it)
+From Nov 26 - Dec 1
+1350 tweets from 15 country have been loaded in. 
+703 out of 1350 tweets show negative attitude for #china gene editing 
+EXP: JUST BECAUSE WE CAN DOES NOT MEAN WE SHOULD-Chinese Scientist Claims to Use Crispr to Make First Genetically Edited
+375 out of 1350 tweets show neutral attitude for #china gene editing
+EXP: the gene-edited embryo is meant to be born and could potentially suffer unknown consequences from it
+272 out of 1350 tweets show positive attitude for #china gene editing
+EXP: China baby gene-editing scientist defends his research , raises possibility of thirdembryo
+However ' Proud '(sarcasm)appearance for many times in positive sentiment score result which means irony and sarcasm can not be tested by computer.  
 
 
 # Resources:
