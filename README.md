@@ -13,6 +13,7 @@ My topic is about the movement of #gene_editing on Twitter. I want to analysis U
 # Procedure:
 First of all, request tweets API from twitter, get the API key. Then 
 
+The repository contains four folders.
 
 # Result Analysis (still working on it)
 From Nov 26 - Dec 1
