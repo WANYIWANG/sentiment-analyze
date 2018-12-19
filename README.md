@@ -10,7 +10,7 @@ CRISPR is easier to use and more precise than previous methods, but it is not a 
 This technology Is not allowed in US and many other country. 
 My topic is about the movement of #gene_editing on Twitter. I want to analysis US people’s opinions (positive or negative) about this issue by the distribution of region. 
 
-# Procedure:
+# Procedure of data collection:
 
 1.Apply for the Twitter API key (Twurl is access token app specifically for the Twitter API.)
 Install twurl : gem install twurl
@@ -38,13 +38,8 @@ from google.cloud import language, enums, and types.Do the semantical analysis b
 I wrote data and sentiment score into csv file with six dimensions.
    fieldnames = ['user_name', 'location', 'post_time', 'sentiment_score', "magnitude", "text"]
 
-8. Re
 
-
-
-
-
-# Result Analysis (still working on it)
+# Result Analysis
 From Nov 26 - Dec 1
 1350 tweets from 15 country have been loaded in. 
 703 out of 1350 tweets show negative attitude for #china gene editing 
@@ -53,7 +48,8 @@ EXP: JUST BECAUSE WE CAN DOES NOT MEAN WE SHOULD-Chinese Scientist Claims to Use
 EXP: the gene-edited embryo is meant to be born and could potentially suffer unknown consequences from it
 272 out of 1350 tweets show positive attitude for #china gene editing
 EXP: China baby gene-editing scientist defends his research , raises possibility of thirdembryo
-However ' Proud '(sarcasm)appearance for many times in positive sentiment score result which means irony and sarcasm can not be tested by computer.  
+However ' Proud '(sarcasm)appearance for many times in positive sentiment score result which means irony and sarcasm can not be tested by computer. 
+Within five days, 400 people in two major cities in California posted or forwarded tweets of #gene_editing. New York and Boston also paid close attention to this topic, with tweets of 200. On the contrary, Las Vegas, Penn and some other cities have only a few tweets about this news.
 
 # python first layer map (with 15 country icon)
 file:///Users/wanyiwang/Desktop/wanyi-tweet-analysis/map.html
@@ -64,7 +60,7 @@ In this step, I stocked by error
 json.decoder.JSONDecodeError: Expecting value: line 7 column 1 (char 6)"
 
 # tableau map
-
+in the folder foward. Please check.
 
 # Resources:
 Twitter Tweets Guide: https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html
@@ -83,6 +79,8 @@ Github Instruction: https://help.github.com/articles/adding-a-file-to-a-reposito
 Leaflet: https://leafletjs.com/
 
 NLTK.tokenize : https://www.nltk.org/api/nltk.tokenize.html
+
+Python Map Creation: https://www.youtube.com/watch?v=4RnU5qKTfYY
 
 
 
