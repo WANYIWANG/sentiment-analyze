@@ -51,16 +51,16 @@ EXP: China baby gene-editing scientist defends his research , raises possibility
 However ' Proud '(sarcasm)appearance for many times in positive sentiment score result which means irony and sarcasm can not be tested by computer. 
 Within five days, 400 people in two major cities in California posted or forwarded tweets of #gene_editing. New York and Boston also paid close attention to this topic, with tweets of 200. On the contrary, Las Vegas, Penn and some other cities have only a few tweets about this news.
 
-# python first layer map (with 15 country icon)
+# Python first layer map (with 15 country icon)
 file:///Users/wanyiwang/Desktop/wanyi-tweet-analysis/map.html
 
-# python second layer map (choropleth map)
+# Python second layer map (choropleth map)
 In this step, I stocked by error 
 "raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 7 column 1 (char 6)"
 
-# tableau map
-in the folder foward. Please check.
+# Tableau map
+In the folder foward. Please check.
 
 # Resources:
 Twitter Tweets Guide: https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html
