@@ -65,6 +65,9 @@ In the folder foward. Please check.
 
 <img width="1137" alt="screen shot 2018-12-19 at 6 08 52 am" src="https://user-images.githubusercontent.com/31804095/50219575-ae24cd00-035d-11e9-9a69-e82b3abf2cde.png">
 
+# Future: 
+Keep play on the python visualizaiton. Practice regular expression and data scraping, and find a interesting topic.
+
 # Resources:
 Twitter Tweets Guide: https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html
 
