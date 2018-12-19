@@ -1,0 +1,25 @@
+import folium
+import pandas as pd
+import os
+import requests
+
+states = os.path.join('geo', 'us-states.json')
+sentiment_data = os.path.join('geo', 'sentiment_data.csv')
+sentiment_data2 = pd.read_csv(sentiment_data)
+
+m = folium.Map(location=[48, -102], zoom_start=3)
+
+m.choropleth(
+    geo_data=states,
+    name='choropleth',
+    data=sentiment_data2,
+    columns=['State', 'Sentiment Score'],
+    key_on='feature.id',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.2,
+    legend_name='Sentiment Score'
+)
+
+folium.LayerControl().add_to(m)
+m.save('map2.html')
