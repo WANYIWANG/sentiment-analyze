@@ -1,19 +1,48 @@
 # sentiment-analyze
 # Program For Cultural Heritage
-Final Presentation: Sentiment Analysis of “Gene-Editing”tweets 
+Final Presentation: Sentiment Analysis of “#gene_editing” tweets 
 # My Github Repo: https://github.com/WANYIWANG/sentiment-analyze
 
 # Project Description:
-The final project of Programming for Culture Heritage is an integrity project with API request, data scraping and cleaning, semantical analyze, save data into csv file, and data visualization. 
-Recently, A Chinese researcher used CRISPR - Cas9 technology that created the first gene-edited twin babies.
+The final project of Programming for Culture Heritage is an integrity project with API request, data scraping and cleaning, semantical analyze, save data into csv file, and data visualization by python and tableau. 
+RRecently, A Chinese researcher used CRISPR - Cas9 technology that created the first gene-edited twin babies.
 CRISPR is easier to use and more precise than previous methods, but it is not a perfect technology. It can lead to unintended consequences, such as affecting other genes (“off-target” effects) or making multiple modifications of the gene we are aiming to modify (“on-target” effects). There is an ongoing discussion as to how widespread “off target” and “on-targets” modifications are, and what the unintended consequences of these effects may be.
 This technology Is not allowed in US and many other country. 
 My topic is about the movement of #gene_editing on Twitter. I want to analysis US people’s opinions (positive or negative) about this issue by the distribution of region. 
 
 # Procedure:
-First of all, request tweets API from twitter, get the API key. Then 
 
-The repository contains four folders.
+1.Apply for the Twitter API key (Twurl is access token app specifically for the Twitter API.)
+Install twurl : gem install twurl
+twurl authorize --consumer-key key / --consumer-secret secret
+
+2.Make request 
+twurl /1.1/search/tweets.json?"q=gene editing
+&count=100&geocode=40.730610,-73.935242,50mi&result_type=popular"
+(in this step, I requested area within 50miles of 15 main regions of U.S., each region requested twice.)
+
+3.Parse json data
+Find the json structure by browse it into json reader online. Specify the path I want to request, Key: "Statues"
+
+4.Load data
+Load tweets from downloaded files. First, create an empty list to store parsed tweets, and store all tweets into a list that each tweet is represented by a dict, e.g., read all files under current directory.
+
+5.Clean data
+In this step, I cleaned tweets data by separate text by blank using TweetTokenizer, "ascii" to convert it to unicode, and "strip & reduce len" to delete space. I skipped the test of url, @ sign, and length short than 3 characters text from follower analysis. only keep useful fields, like "text", "location", "post_time" and "user_name"
+
+6.Semantical analysis by Google Cloud API
+In Google NLP API, Quickstart: Using Client Libraries. I set up a project and download API key json file.
+from google.cloud import language, enums, and types.Do the semantical analysis based on Google instruction that to get two more dimensions data: sentiment score and sentiment magnitude.
+
+7.import csv
+I wrote data and sentiment score into csv file with six dimensions.
+   fieldnames = ['user_name', 'location', 'post_time', 'sentiment_score', "magnitude", "text"]
+
+8. Re
+
+
+
+
 
 # Result Analysis (still working on it)
 From Nov 26 - Dec 1
@@ -25,6 +54,16 @@ EXP: the gene-edited embryo is meant to be born and could potentially suffer unk
 272 out of 1350 tweets show positive attitude for #china gene editing
 EXP: China baby gene-editing scientist defends his research , raises possibility of thirdembryo
 However ' Proud '(sarcasm)appearance for many times in positive sentiment score result which means irony and sarcasm can not be tested by computer.  
+
+# python first layer map (with 15 country icon)
+file:///Users/wanyiwang/Desktop/wanyi-tweet-analysis/map.html
+
+# python second layer map (choropleth map)
+In this step, I stocked by error 
+"raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 7 column 1 (char 6)"
+
+# tableau map
 
 
 # Resources:
@@ -42,6 +81,8 @@ Read Jason files: https://jsoneditoronline.org/
 Github Instruction: https://help.github.com/articles/adding-a-file-to-a-repository-using-the-command-line/
 
 Leaflet: https://leafletjs.com/
+
+NLTK.tokenize : https://www.nltk.org/api/nltk.tokenize.html
 
 
 
