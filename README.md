@@ -61,6 +61,9 @@ json.decoder.JSONDecodeError: Expecting value: line 7 column 1 (char 6)"
 
 # Tableau map
 In the folder foward. Please check.
+<img width="923" alt="screen shot 2018-12-19 at 6 08 13 am" src="https://user-images.githubusercontent.com/31804095/50219557-9e0ced80-035d-11e9-8404-50c5bf1af730.png">
+
+<img width="1137" alt="screen shot 2018-12-19 at 6 08 52 am" src="https://user-images.githubusercontent.com/31804095/50219575-ae24cd00-035d-11e9-9a69-e82b3abf2cde.png">
 
 # Resources:
 Twitter Tweets Guide: https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html
